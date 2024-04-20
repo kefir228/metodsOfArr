@@ -1,7 +1,7 @@
 // 1.
 // const getRandomArray = (length, min, max) => {
-//     let count = new Array(length).fill(1)
-//     const randomNum = count.map((el) => {
+//     const newArr = new Array(length).fill(1)
+//     const randomNum = newArr.map((el) => {
 //         return Math.floor(Math.random() * (max - min) + min)
 //     })
 //     return randomNum
@@ -10,17 +10,17 @@
 
 // 2.
 // const getModa = (...numbers) => {
-//     const intModa = numbers.filter((num) => Number.isInteger(num))
-//     let Moda = 0
-//     const result = intModa.reduce((moda, numbers) => {
-//         if(moda == numbers){
-//             Moda ++
+//     const moda = {}
+//     for(let i of numbers){
+//         if(moda[i]){
+//             moda[i]++
+//         }else{
+//             moda[i] = 1
 //         }
+//     }
 //     return moda
-//     })
-//     return result
 // }
-// console.log(getModa(2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2,3,3,44,4,4,4,4,4,4,4,4));
+// console.log(getModa(55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2,3,3,44,4,4,4,4,4,4,4,4));
 
 // 3.
 // const getAverage = (...numbers) => {
@@ -64,15 +64,15 @@
 
 // 6.
 // const countPositiveNumbers = (...numbers) => {
-//     count = 0
-//     const positNum = numbers.filter((num)=>{
+//     let count = 0
+//     numbers.filter((num)=>{
 //         if(num >= 0){
 //             count++
 //         }
 //     })
 //     return count
 // }
-// console.log(countPositiveNumbers(-1,0,2,-4,3));
+// console.log(countPositiveNumbers(-1,0,2,-4,3,6));
 
 // 7.
 // const  getDividedByFive = (...numbers) => {
@@ -87,12 +87,11 @@
 
 // 8.
 // const  replaceBadWords = (string) => {
-//     const words = string.split(' ')
-//     const changedWords = words.map(word => word.replace(/shit|fuck/g, '****'));
-//     const changedString = changedWords.join(' ');
-//     return changedString;
-// }
-// console.log(replaceBadWords("Are you fucking kidding?"));
+//     const badWordArr = ['shit', 'fuck', 'whore', 'slut', 'bitch', 'fool', 'bullshit', 'munter']
+//     const regex = new RegExp(badWordArr.join('|'), 'gi');
+//     return string.replace(regex, '****')
+//     }
+// console.log(replaceBadWords("Are you fUcking kidding?"));
 
 // 9.
 // const divideByThree = (word) => {
